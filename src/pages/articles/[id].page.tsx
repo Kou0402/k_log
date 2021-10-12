@@ -1,10 +1,12 @@
 import { NextPage } from 'next'
-import { Box } from '@chakra-ui/layout'
+import { Box, Heading, Text } from '@chakra-ui/layout'
 
 const Articles: NextPage = () => {
   return (
-    <Box>
-      <h1>Articles</h1>
+    <Box as="article">
+      <Heading as="h2">タイトル</Heading>
+      <Text>2021-11-11</Text>
+      <Text>内容内容内容内容内容内容内容内容内容内容内容内容内容</Text>
     </Box>
   )
 }
