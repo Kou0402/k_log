@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
-import { Header } from "./Header";
+import type { NextPage } from 'next'
+import { Header } from './Header'
 
 const Home: NextPage = () => {
   return (
@@ -7,7 +7,7 @@ const Home: NextPage = () => {
       <Header />
       <main>ホームページ</main>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

@@ -3,5 +3,5 @@ export const Header = () => {
     <header>
       <h1>タイトル</h1>
     </header>
-  );
-};
+  )
+}
