@@ -4,7 +4,6 @@ import { Header } from './Header'
 const Home: NextPage = () => {
   return (
     <div>
-      <Header />
       <main>ホームページ</main>
     </div>
   )
