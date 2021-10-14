@@ -1,5 +1,6 @@
 export type Article = {
-  id: number
+  id: string
   title: string
   createdAt: Date
+  content: string
 }
