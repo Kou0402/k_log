@@ -12,13 +12,11 @@ export const findAllArticle = async () => {
   return data.contents
 }
 
-type FindArticleResponse = {
-  contents: Pick<Article, 'title' | 'createdAt' | 'content'>[]
-}
+type FindArticleResponse = Pick<Article, 'title' | 'createdAt' | 'content'>
 export const findArticle = async (id: Article['id']) => {
   const data = await client.get<FindArticleResponse>({
     endpoint: 'articles',
-    queries: { ids: id },
+    contentId: id,
   })
-  return data.contents
+  return data
 }
