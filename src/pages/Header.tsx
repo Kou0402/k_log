@@ -6,7 +6,7 @@ export const Header = () => {
     <Box as="header" p="2">
       <Heading>
         <Link href="/">
-          <a>kou blog</a>
+          <a>k_log</a>
         </Link>
       </Heading>
     </Box>
