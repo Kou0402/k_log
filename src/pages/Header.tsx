@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Box, Heading, Text } from '@chakra-ui/layout'
+import { Box, Heading } from '@chakra-ui/layout'
 
 export const Header = () => {
   return (

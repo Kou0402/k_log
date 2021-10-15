@@ -1,5 +1,5 @@
 import { Article } from 'domain/articles/article'
-import { client } from './client'
+import { client } from 'api/client'
 
 type FindAllArticleResponse = {
   contents: Pick<Article, 'id' | 'title' | 'createdAt'>[]

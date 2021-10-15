@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Wrap } from '@chakra-ui/layout'
+import { Box, Text } from '@chakra-ui/layout'
 import { Paper } from 'components/Paper'
 import { Article } from './article'
 import Link from 'next/link'
