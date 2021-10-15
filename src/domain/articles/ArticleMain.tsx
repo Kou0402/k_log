@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
-import { Article } from './articles/article'
+import { Article } from './article'
 import { css } from '@emotion/react'
 
 export type ArticleMainProps = Pick<Article, 'title' | 'createdAt' | 'content'>

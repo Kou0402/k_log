@@ -3,7 +3,7 @@ import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useRecoilValueLoadable, useSetRecoilState } from 'recoil'
 import { articleIdState, articleState } from 'domain/articles/states'
-import { ArticleMain } from 'domain/ArticleMain'
+import { ArticleMain } from 'domain/articles/ArticleMain'
 
 const Articles: NextPage = () => {
   const router = useRouter()
