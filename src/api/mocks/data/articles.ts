@@ -6,6 +6,11 @@ export const getArticlesMock = () => {
         createdAt: '2021-10-14T13:29:34.568Z',
         title: 'ブログを作りました',
       },
+      {
+        id: 'n--xjw8vp_2',
+        createdAt: '2021-10-14T13:29:34.568Z',
+        title: 'テスト',
+      },
     ],
   }
 }
