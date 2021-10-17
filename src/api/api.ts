@@ -1,7 +1,7 @@
 import { Article } from 'domain/articles/article'
 import { client } from 'api/client'
 
-type FindAllArticleResponse = {
+export type FindAllArticleResponse = {
   contents: Pick<Article, 'id' | 'title' | 'createdAt'>[]
 }
 export const findAllArticle = async () => {
@@ -12,7 +12,7 @@ export const findAllArticle = async () => {
   return data.contents
 }
 
-type FindArticleResponse = Pick<Article, 'title' | 'createdAt' | 'content'>
+export type FindArticleResponse = Pick<Article, 'title' | 'createdAt' | 'content'>
 export const findArticle = async (id: Article['id']) => {
   const data = await client.get<FindArticleResponse>({
     endpoint: 'articles',
