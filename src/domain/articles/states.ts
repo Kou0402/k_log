@@ -1,4 +1,4 @@
-import { findAllArticle, findArticle } from 'api/apis'
+import { findAllArticle, findArticle } from 'api/api'
 import { atom, selector } from 'recoil'
 import { Article } from './article'
 
