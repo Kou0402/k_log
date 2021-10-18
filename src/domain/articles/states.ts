@@ -17,6 +17,10 @@ export const articleIdState = atom<Article['id']>({
 export const articleState = selector({
   key: 'articleState',
   get: async ({ get }) => {
-    return await findArticle(get(articleIdState))
+    const response = await findArticle(get(articleIdState))
+    return {
+      ...response,
+      createdAt: new Date(response.createdAt),
+    }
   },
 })

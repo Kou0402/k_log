@@ -1,15 +1,20 @@
-import { Box, Heading, Text } from '@chakra-ui/react'
+import { Box, Heading, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { Article } from './article'
 import { css } from '@emotion/react'
+import { format } from 'date-fns'
 
 export type ArticleMainProps = Pick<Article, 'title' | 'createdAt' | 'content'>
 export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content }) => {
   return (
     <Box as="article">
-      <Heading as="h2">{title}</Heading>
-      <Text>{createdAt}</Text>
-      <Box css={contentStyle} dangerouslySetInnerHTML={{ __html: content }}></Box>
+      <Stack>
+        <Text>{format(createdAt, 'yyyy-MM-dd')}</Text>
+        <Heading as="h2" fontSize="24px">
+          {title}
+        </Heading>
+        <Box css={contentStyle} dangerouslySetInnerHTML={{ __html: content }}></Box>
+      </Stack>
     </Box>
   )
 }
