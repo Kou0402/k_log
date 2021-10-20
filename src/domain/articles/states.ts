@@ -1,5 +1,5 @@
 import { findAllArticle, findArticle } from 'api/api'
-import { atom, selector } from 'recoil'
+import { selector, selectorFamily } from 'recoil'
 import { Article } from './article'
 
 export const articlesState = selector({
@@ -9,15 +9,13 @@ export const articlesState = selector({
   },
 })
 
-export const articleIdState = atom<Article['id']>({
-  key: 'articleIdState',
-  default: '',
-})
-
-export const articleState = selector({
+export const articleState = selectorFamily<
+  Pick<Article, 'title' | 'createdAt' | 'content'>,
+  Article['id']
+>({
   key: 'articleState',
-  get: async ({ get }) => {
-    const response = await findArticle(get(articleIdState))
+  get: (articleId) => async () => {
+    const response = await findArticle(articleId)
     return {
       ...response,
       createdAt: new Date(response.createdAt),

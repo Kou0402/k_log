@@ -1,16 +1,15 @@
 import React from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useRecoilValueLoadable, useSetRecoilState } from 'recoil'
-import { articleIdState, articleState } from 'domain/articles/states'
+import { useRecoilValueLoadable } from 'recoil'
+import { articleState } from 'domain/articles/states'
 import { ArticleMain } from 'domain/articles/ArticleMain'
 
 const Articles: NextPage = () => {
   const router = useRouter()
   const { id } = router.query
-  const setArticleId = useSetRecoilState(articleIdState)
-  setArticleId(id as string)
-  const article = useRecoilValueLoadable(articleState)
+  const articleId = typeof id === 'string' ? id : ''
+  const article = useRecoilValueLoadable(articleState(articleId))
 
   switch (article.state) {
     case 'hasValue':
