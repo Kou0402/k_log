@@ -31,3 +31,16 @@ export const findArticle = async (id: Article['id']) => {
   })
   return data
 }
+
+export type FindAllArticleTagResponse = {
+  contents: {
+    name: string
+  }[]
+}
+export const findAllArticleTag = async () => {
+  const data = await client.get<FindAllArticleTagResponse>({
+    endpoint: 'tags',
+    queries: { fields: 'name' },
+  })
+  return data.contents
+}
