@@ -6,15 +6,12 @@ export type FindAllArticleResponse = {
     id: Article['id']
     title: Article['title']
     createdAt: string
-    tags: {
-      name: string
-    }[]
   }[]
 }
 export const findAllArticle = async () => {
   const data = await client.get<FindAllArticleResponse>({
     endpoint: 'articles',
-    queries: { fields: 'id,title,createdAt,tags' },
+    queries: { fields: 'id,title,createdAt' },
   })
   return data.contents
 }

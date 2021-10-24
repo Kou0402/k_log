@@ -18,6 +18,7 @@ const Articles: NextPage = () => {
           title={article.contents.title}
           createdAt={article.contents.createdAt}
           content={article.contents.content}
+          tags={article.contents.tags}
         />
       )
     case 'loading':
