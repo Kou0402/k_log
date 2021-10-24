@@ -6,5 +6,5 @@ export type Article = {
   tags: string[] | null
 }
 
-export type ArticleMain = Pick<Article, 'title' | 'createdAt' | 'content'>
-export type ArticleListItem = Pick<Article, 'id' | 'title' | 'createdAt'>
+export type ArticleMain = Pick<Article, 'title' | 'createdAt' | 'content' | 'tags'>
+export type ArticleListItem = Pick<Article, 'id' | 'title' | 'createdAt' | 'tags'>
