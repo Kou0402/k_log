@@ -1,10 +1,10 @@
 import { Box, Heading, Text, theme } from '@chakra-ui/react'
 import React from 'react'
-import { Article } from './article'
+import { ArticleMain as ArticleMainType } from 'domain/articles/types'
 import { css } from '@emotion/react'
 import { format } from 'date-fns'
 
-export type ArticleMainProps = Pick<Article, 'title' | 'createdAt' | 'content'>
+export type ArticleMainProps = ArticleMainType
 export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content }) => {
   return (
     <Box as="article">

@@ -1,6 +1,6 @@
 import { findAllArticle, findArticle } from 'api/api'
 import { selector, selectorFamily } from 'recoil'
-import { Article } from './article'
+import { Article, ArticleMain } from 'domain/articles/types'
 
 export const articlesState = selector({
   key: 'articlesState',
@@ -9,10 +9,7 @@ export const articlesState = selector({
   },
 })
 
-export const articleState = selectorFamily<
-  Pick<Article, 'title' | 'createdAt' | 'content'>,
-  Article['id']
->({
+export const articleState = selectorFamily<ArticleMain, Article['id']>({
   key: 'articleState',
   get: (articleId) => async () => {
     const response = await findArticle(articleId)
