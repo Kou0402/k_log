@@ -26,7 +26,7 @@ export const TagSearch: React.FC = () => {
               {tags.contents.map((tag) => (
                 <Link key={tag} href={`/?tag=${tag}`}>
                   <a>
-                    <MenuItem>{tag}</MenuItem>
+                    <MenuItem _hover={{ backgroundColor: 'gray.700' }}>{tag}</MenuItem>
                   </a>
                 </Link>
               ))}
