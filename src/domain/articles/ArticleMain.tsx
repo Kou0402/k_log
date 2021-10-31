@@ -1,17 +1,22 @@
-import { Box, Heading, Text, theme } from '@chakra-ui/react'
+import { Box, HStack, Heading, Text, theme } from '@chakra-ui/react'
 import React from 'react'
-import { Article } from './article'
+import { ArticleMain as ArticleMainType } from 'domain/articles/types'
 import { css } from '@emotion/react'
 import { format } from 'date-fns'
 
-export type ArticleMainProps = Pick<Article, 'title' | 'createdAt' | 'content'>
-export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content }) => {
+export type ArticleMainProps = ArticleMainType
+export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content, tags }) => {
   return (
     <Box as="article">
       <Heading as="h2" fontSize="24px">
         {title}
       </Heading>
       <Text color="gray.400">{format(createdAt, 'yyyy-MM-dd')}</Text>
+      <HStack color="gray.400">
+        {tags.map((tag) => (
+          <Text key={tag}>{tag}</Text>
+        ))}
+      </HStack>
       <Box css={contentStyle} mt={8} mb={8} dangerouslySetInnerHTML={{ __html: content }}></Box>
     </Box>
   )
