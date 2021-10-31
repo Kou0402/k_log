@@ -1,11 +1,15 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/layout'
 import { Paper } from 'components/Paper'
-import { ArticleListItem } from 'domain/articles/types'
 import Link from 'next/link'
 import { format } from 'date-fns'
+import { Article } from './types'
 
-export type ArticleCardProps = ArticleListItem
+export type ArticleCardProps = {
+  id: Article['id']
+  title: Article['title']
+  createdAt: Article['createdAt']
+}
 export const ArticleCard: React.FC<ArticleCardProps> = ({ id, title, createdAt }) => {
   return (
     <Link href={`/articles/${id}`}>

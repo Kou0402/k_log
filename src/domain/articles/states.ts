@@ -10,6 +10,7 @@ export const articlesState = selector<ArticleListItem[]>({
       return {
         ...item,
         createdAt: new Date(item.createdAt),
+        tags: item.tags.map((tag) => tag.name),
       }
     })
   },
