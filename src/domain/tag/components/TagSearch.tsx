@@ -2,7 +2,7 @@ import React from 'react'
 import { IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 import { SearchIcon } from '@chakra-ui/icons'
 import { useRecoilValueLoadable } from 'recoil'
-import { tagsState } from './states'
+import { tagsState } from '../states'
 import Link from 'next/link'
 
 export const TagSearch: React.FC = () => {

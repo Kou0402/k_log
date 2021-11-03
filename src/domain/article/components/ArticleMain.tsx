@@ -1,6 +1,6 @@
 import { Box, HStack, Heading, Text, theme } from '@chakra-ui/react'
 import React from 'react'
-import { ArticleMain as ArticleMainType } from 'domain/articles/types'
+import { ArticleMain as ArticleMainType } from 'domain/article/types'
 import { css } from '@emotion/react'
 import { format } from 'date-fns'
 

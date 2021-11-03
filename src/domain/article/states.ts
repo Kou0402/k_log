@@ -1,6 +1,6 @@
 import { findAllArticle, findArticle } from 'api/api'
 import { selector, selectorFamily } from 'recoil'
-import { Article, ArticleListItem, ArticleMain } from 'domain/articles/types'
+import { Article, ArticleListItem, ArticleMain } from 'domain/article/types'
 
 export const articlesState = selector<ArticleListItem[]>({
   key: 'articlesState',

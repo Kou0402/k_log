@@ -1,9 +1,9 @@
 import React from 'react'
 import { Box, Text } from '@chakra-ui/layout'
-import { Paper } from 'components/Paper'
 import Link from 'next/link'
 import { format } from 'date-fns'
-import { Article } from './types'
+import { Article } from '../types'
+import { Paper } from 'utils/components/Paper'
 
 export type ArticleCardProps = {
   id: Article['id']

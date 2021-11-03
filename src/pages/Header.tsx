@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { Box, Heading } from '@chakra-ui/layout'
-import { TagSearch } from 'domain/tags/TagSearch'
+import { TagSearch } from 'domain/tag/components/TagSearch'
 import { Flex, Spacer } from '@chakra-ui/react'
 
 export const Header = () => {

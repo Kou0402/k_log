@@ -2,8 +2,8 @@ import React from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useRecoilValueLoadable } from 'recoil'
-import { articleState } from 'domain/articles/states'
-import { ArticleMain } from 'domain/articles/ArticleMain'
+import { articleState } from 'domain/article/states'
+import { ArticleMain } from 'domain/article/components/ArticleMain'
 
 const Articles: NextPage = () => {
   const router = useRouter()

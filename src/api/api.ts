@@ -1,4 +1,4 @@
-import { Article } from 'domain/articles/types'
+import { Article } from 'domain/article/types'
 import { client } from 'api/client'
 
 export type FindAllArticleResponse = {

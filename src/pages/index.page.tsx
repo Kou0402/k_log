@@ -1,6 +1,6 @@
 import { Box, Text } from '@chakra-ui/layout'
-import { ArticleCard } from 'domain/articles/ArticleCard'
-import { articlesState } from 'domain/articles/states'
+import { ArticleCard } from 'domain/article/components/ArticleCard'
+import { articlesState } from 'domain/article/states'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useRecoilValueLoadable } from 'recoil'
