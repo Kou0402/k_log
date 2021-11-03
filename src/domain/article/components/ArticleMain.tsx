@@ -5,22 +5,20 @@ import { css } from '@emotion/react'
 import { format } from 'date-fns'
 
 export type ArticleMainProps = ArticleMainType
-export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content, tags }) => {
-  return (
-    <Box as="article">
-      <Heading as="h2" fontSize="24px">
-        {title}
-      </Heading>
-      <Text color="gray.400">{format(createdAt, 'yyyy-MM-dd')}</Text>
-      <HStack color="gray.400">
-        {tags.map((tag) => (
-          <Text key={tag}>{tag}</Text>
-        ))}
-      </HStack>
-      <Box css={contentStyle} mt={8} mb={8} dangerouslySetInnerHTML={{ __html: content }}></Box>
-    </Box>
-  )
-}
+export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content, tags }) => (
+  <Box as="article">
+    <Heading as="h2" fontSize="24px">
+      {title}
+    </Heading>
+    <Text color="gray.400">{format(createdAt, 'yyyy-MM-dd')}</Text>
+    <HStack color="gray.400">
+      {tags.map((tag) => (
+        <Text key={tag}>{tag}</Text>
+      ))}
+    </HStack>
+    <Box css={contentStyle} mt={8} mb={8} dangerouslySetInnerHTML={{ __html: content }}></Box>
+  </Box>
+)
 
 const contentStyle = css`
   h1 {

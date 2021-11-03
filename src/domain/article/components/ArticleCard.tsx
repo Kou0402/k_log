@@ -10,17 +10,15 @@ export type ArticleCardProps = {
   title: Article['title']
   createdAt: Article['createdAt']
 }
-export const ArticleCard: React.FC<ArticleCardProps> = ({ id, title, createdAt }) => {
-  return (
-    <Link href={`/articles/${id}`}>
-      <a>
-        <Paper>
-          <Box>
-            <Text fontSize="sm">{format(createdAt, 'yyyy-MM-dd')}</Text>
-            <Text fontSize="lg">{title}</Text>
-          </Box>
-        </Paper>
-      </a>
-    </Link>
-  )
-}
+export const ArticleCard: React.FC<ArticleCardProps> = ({ id, title, createdAt }) => (
+  <Link href={`/articles/${id}`}>
+    <a>
+      <Paper>
+        <Box>
+          <Text fontSize="sm">{format(createdAt, 'yyyy-MM-dd')}</Text>
+          <Text fontSize="lg">{title}</Text>
+        </Box>
+      </Paper>
+    </a>
+  </Link>
+)
