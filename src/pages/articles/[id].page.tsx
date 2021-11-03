@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { useRecoilValueLoadable } from 'recoil'
+import { useRecoilValue } from 'recoil'
 import { articleState } from 'domain/article/states'
 import { ArticleMain } from 'domain/article/components/ArticleMain'
 
@@ -9,23 +9,16 @@ const Articles: NextPage = () => {
   const router = useRouter()
   const { id } = router.query
   const articleId = typeof id === 'string' ? id : ''
-  const article = useRecoilValueLoadable(articleState(articleId))
+  const article = useRecoilValue(articleState(articleId))
 
-  switch (article.state) {
-    case 'hasValue':
-      return (
-        <ArticleMain
-          title={article.contents.title}
-          createdAt={article.contents.createdAt}
-          content={article.contents.content}
-          tags={article.contents.tags}
-        />
-      )
-    case 'loading':
-      return null
-    case 'hasError':
-      throw article.contents
-  }
+  return (
+    <ArticleMain
+      title={article.title}
+      createdAt={article.createdAt}
+      content={article.content}
+      tags={article.tags}
+    />
+  )
 }
 
 export default Articles
