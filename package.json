@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir src",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@chakra-ui/icons": "^1.0.16",
@@ -15,7 +17,7 @@
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "date-fns": "^2.25.0",
-    "framer-motion": "^5",
+    "framer-motion": "^4",
     "microcms-js-sdk": "^2.0.0",
     "next": "12.0.1",
     "react": "17.0.2",
@@ -23,12 +25,18 @@
     "recoil": "^0.4.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@storybook/addon-actions": "^6.3.12",
+    "@storybook/addon-essentials": "^6.3.12",
+    "@storybook/addon-links": "^6.3.12",
+    "@storybook/react": "^6.3.12",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.2",
     "@types/react": "17.0.33",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "babel-jest": "^27.3.1",
+    "babel-loader": "^8.2.3",
     "eslint": "^8.1.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "12.0.1",
