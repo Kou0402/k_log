@@ -43,4 +43,8 @@ const contentStyle = css`
       text-decoration: underline;
     }
   }
+  ul {
+    list-style: inside;
+    padding-left: 16px;
+  }
 `
