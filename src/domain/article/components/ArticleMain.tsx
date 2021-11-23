@@ -7,7 +7,7 @@ import { format } from 'date-fns'
 export type ArticleMainProps = ArticleMainType
 export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, content, tags }) => (
   <Box as="article">
-    <Heading as="h2" fontSize="24px">
+    <Heading as="h1" fontSize="26px">
       {title}
     </Heading>
     <Text color="gray.400">{format(createdAt, 'yyyy-MM-dd')}</Text>
@@ -22,20 +22,23 @@ export const ArticleMain: React.FC<ArticleMainProps> = ({ title, createdAt, cont
 
 const contentStyle = css`
   h1 {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
-    margin: 40px 0 16px;
-    border-bottom: 1px solid #ddd;
+    margin: 24px 0 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid ${theme.colors.gray[400]};
   }
   h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 40px 0 16px;
+    margin: 24px 0 16px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid ${theme.colors.gray[400]};
   }
   h3 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 20px 0 12px;
+    margin: 24px 0 16px;
   }
   a {
     color: ${theme.colors.blue[400]};
