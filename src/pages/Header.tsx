@@ -10,7 +10,7 @@ export const Header = () => {
       <Flex>
         <Heading fontFamily="'PT Mono', monospace;">
           <Link href="/">
-            <a>k_LOG</a>
+            <a>P_LOG</a>
           </Link>
         </Heading>
         <Spacer />
