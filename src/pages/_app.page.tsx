@@ -16,9 +16,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Suspense fallback={<></>}>
           <ChakraProvider theme={theme}>
             <Header />
-            <Box as="main" p="2">
-              <Component {...pageProps} />
-            </Box>
+            <Suspense fallback={<></>}>
+              <Box as="main" p="2">
+                <Component {...pageProps} />
+              </Box>
+            </Suspense>
           </ChakraProvider>
         </Suspense>
       </RecoilRoot>
